@@ -1,12 +1,12 @@
-GET http://localhost:3000/places?text=av governador valadares, betim, 1000
+GET http://localhost:3000/places?text=Rua Nelson Natal, 227, Sumaré, São Paulo
 
 ###
-GET http://localhost:3000/places?text=av amazonas, belo horizonte, 1000
+GET http://localhost:3000/places?text=Shooping Campinas
 
 ###
 
-@originId = EkZBdi4gR292LiBWYWxhZGFyZXMsIDEwMDAgLSBTYW50byBBZm9uc28sIEJldGltIC0gTUcsIDMyNjIzLTU3NSwgQnJhc2lsIjESLwoUChIJja7gMwfdpgARgN9V_RFivpEQ6AcqFAoSCfmsiD4H3aYAEdRlj37c-uzz
-@destinationId = ChIJTcM3WRKWpgARIBxMZeldEtM
+@originId = ChIJxw02Laa_yJQRXm3IFQZNTO4
+@destinationId = ChIJb3Fzl9_IyJQRjTD2JBoItMY
 
 ###
 GET http://localhost:3000/directions?originId={{ originId }}&destinationId={{ destinationId }}
@@ -16,7 +16,7 @@ POST http://localhost:3000/routes
 Content-Type: application/json
 
 {
-    "name": "rota 1",
+    "name": "Casa - Trabalho",
     "source_id": "{{ originId }}",
     "destination_id": "{{ destinationId }}"
 }
@@ -25,4 +25,17 @@ Content-Type: application/json
 GET http://localhost:3000/routes
 
 ###
-GET http://localhost:3000/routes/674ef78bab1148ea9161c23b
+GET http://localhost:3000/routes/6758b54e385beee6d480a484
+
+###
+DELETE http://localhost:3000/routes/6758be41abd5a7768a59a1aa
+
+###
+PATCH http://localhost:3000/routes/6758c11605f6e06a048a75c7
+Content-Type: application/json
+
+{
+    "name": "Casa - Shopping Campinas",
+    "source_id": "{{ originId }}",
+    "destination_id": "{{ destinationId }}"
+}
