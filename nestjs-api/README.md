@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Repositório do Django (admin dos vídeos)
+Repositório do Django (backend da administração dos trajetos)
 
 ## Requerimentos
 
